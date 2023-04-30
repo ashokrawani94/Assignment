@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>min and max</title>
+</head>
+
+<body>
+    <h3>Find min and max number in array.</h3>
+    <script>
+        function findMinMax(array) {
+            var min = array[0];
+            var max = array[0];
+
+            for (var i = 1; i < array.length; i++) {
+                if (array[i] < min) {
+                    min = array[i];
+                }
+                if (array[i] > max) {
+                    max = array[i];
+                }
+            }
+
+            return { min, max };
+        }
+
+        var numbers = [3, 5, 1, 10, 7, 20];
+        var result = findMinMax(numbers);
+
+        console.log("The smallest number is "+ result.min);
+        console.log("The largest number is "+ result.max);
+
+    </script>
+</body>
+
+</html>
